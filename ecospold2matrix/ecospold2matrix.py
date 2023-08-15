@@ -2428,7 +2428,7 @@ class Ecospold2Matrix(object):
         units, __ = clean_up_columns(units)
         units = units.rename(columns=self.__SYNONYMS_IMPACT_UNITS)
         sep = '; '
-        units.index = [units.Method[i] + sep + units.Category[i] + sep + units.Indicator[i] for i in units.index]
+        units.index = [units['Method'][i] + sep + units['Category'][i] + sep + units['Indicator'][i] for i in units.index]
 
         # Read and clean characterisation factors
         cf = cf_file['CFs']
