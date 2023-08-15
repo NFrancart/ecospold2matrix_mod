@@ -1,10 +1,10 @@
 from setuptools import setup
 
-exec(open('ecospold2matrix/version.py').read())
+exec(open('ecospold2matrix_mod/version.py').read())
 
 setup(
-    name='ecospold2matrix',
-    packages=['ecospold2matrix', ],
+    name='ecospold2matrix_mod',
+    packages=['ecospold2matrix_mod', ],
     version=__version__,
     author='Guillaume Majeau-Bettez',
     author_email="guillaume.majeau-bettez@ntnu.no",
@@ -21,9 +21,9 @@ setup(
                      'six >= 1.10.0',
                      'xlrd >= 0.9.4',
                      'xlwt >= 1.0.0'],
-    data_files=[('parameters', ['ecospold2matrix/parameters/cas_conflicts.csv',
-                                'ecospold2matrix/parameters/custom_factors.csv',
-                                'ecospold2matrix/parameters/synonyms.csv']),
+    data_files=[('parameters', ['ecospold2matrix_mod/parameters/cas_conflicts.csv',
+                                'ecospold2matrix_mod/parameters/custom_factors.csv',
+                                'ecospold2matrix_mod/parameters/synonyms.csv']),
                 ('', ['LICENSE.txt', 'README.md']),
                 ],
     include_package_data=True,
